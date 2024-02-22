@@ -1,5 +1,5 @@
 # Start from the NVIDIA CUDA base image with CUDA version and Ubuntu version that match your requirements
-FROM nvidia/cuda:11.6.0-base-ubuntu20.04
+FROM nvidia/cuda:12.3.1-base-ubuntu20.04
 
 # Install Python 3 and pip
 RUN apt-get update && apt-get install -y python3-pip python3-dev && \
