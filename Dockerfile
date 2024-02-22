@@ -2,12 +2,10 @@
 FROM nvidia/cuda:12.3.1-base-ubuntu20.04
 
 # Install Python 3 and pip
-RUN apt-get update && apt-get install -y python3-pip python3-dev && \
-    ln -s /usr/bin/python3 /usr/bin/python && \
-    ln -s /usr/bin/pip3 /usr/bin/pip
+RUN apt-get update && apt-get install -y python3-pip python3-dev 
 
 # Install JupyterLab and any other requirements
-RUN pip install jupyterlab
+RUN pip3 install jupyterlab
 
 # Set up working directory
 WORKDIR /home/jovyan/work
